@@ -2,6 +2,7 @@
   "name": "demo",
   "version": "0.1.0",
   "private": true,
+  "description": "react-demo",
   "proxy": "https://market.douban.com/api/v2/market",
   "dependencies": {
     "@antv/data-set": "^0.10.1",
