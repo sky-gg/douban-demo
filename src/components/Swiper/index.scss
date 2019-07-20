@@ -1,0 +1,13 @@
+.swiper-banner {
+  .swiper-container {
+    height: 376px;
+
+    .swiper-pagination-bullets {
+      bottom: 0;
+
+      .swiper-pagination-bullet {
+        background-color: #fff;
+      }
+    }
+  }
+}

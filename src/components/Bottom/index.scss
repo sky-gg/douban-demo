@@ -1,0 +1,21 @@
+.footer-bar {
+  display: flex;
+  background-color: #fff;
+
+  &-item {
+    flex: 1;
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+    font-size: 28px;
+    color: #ababac;
+  }
+
+  &-line {
+    display: block;
+    width: 0;
+    border: 1px solid #f3f2f2;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
