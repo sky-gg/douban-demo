@@ -13,27 +13,27 @@ import Bottom from '@/components/Bottom'
 
 import { BackTop } from 'antd'
 
-const List = () => (
-  <u>
-    <li>你好00(1)</li>
-    <li>你好00(2)</li>
-    <li>你好00(3)</li>
-  </u>
-)
+// const List = () => (
+//   <u>
+//     <li>你好00(1)</li>
+//     <li>你好00(2)</li>
+//     <li>你好00(3)</li>
+//   </u>
+// )
 
-const Item = () => {
-  const arr = [
-    { id: 0, text: '个人中心' },
-    { id: 1, text: '主页' },
-  ];
-  return (
-    <ul>
-      {
-        arr.map((item) => <li key={item.id}>{item.text}</li>)
-      }
-    </ul>
-  )
-}
+// const Item = () => {
+//   const arr = [
+//     { id: 0, text: '个人中心' },
+//     { id: 1, text: '主页' },
+//   ];
+//   return (
+//     <ul>
+//       {
+//         arr.map((item) => <li key={item.id}>{item.text}</li>)
+//       }
+//     </ul>
+//   )
+// }
 
 class Home extends Component {
   constructor(props) {
@@ -95,8 +95,8 @@ class Home extends Component {
           actived={actived}
           onNavClick={this.navClick.bind(this)}
         /> */}
-        <List />
-        <Item />
+        {/* <List /> */}
+        {/* <Item /> */}
       </div>
     );
   }

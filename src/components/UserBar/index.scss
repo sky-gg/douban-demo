@@ -28,4 +28,83 @@
     margin-top: 10px;
     margin-bottom: 10px;
   }
+  .base {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    i {
+      position: relative;
+    }
+    i:before {
+      position: absolute;
+      content: "";
+      width: 40px;
+      height: 40px;
+      z-index: 3;
+      background: greenyellow;
+    }
+    i:after {
+      position: absolute;
+      content: "";
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: url("~@/assets/check.png") no-repeat center;
+      background-size: 100% 100%;
+    }
+  }
+  .base:before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px;
+    background: greenyellow;
+    border-radius: 50%;
+  }
+  .uncheck {
+    border: 1px solid #ccc;
+
+    i:before {
+      animation: leave 1.5s both;
+    }
+  }
+  .check {
+    border: 1px solid transparent;
+
+    i:before {
+      animation: enter 1.5s both;
+    }
+  }
+}
+@keyframes leave {
+  0% {
+    left: 40px;
+  }
+  99% {
+    background: greenyellow;
+  }
+  100% {
+    left: 0;
+    background: #fff;
+  }
+}
+@keyframes enter {
+  0% {
+    left: -50%;
+  }
+  100% {
+    left: 40px;
+  }
+}
+
+@keyframes nobg2 {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }

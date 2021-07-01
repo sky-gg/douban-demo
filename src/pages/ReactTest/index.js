@@ -1,40 +1,47 @@
-import React, { Component } from 'react';
+// eslint-disabled-next-line
+import React, {
+  Component
+} from 'react';
+import DatePicker from '@/components/datePicker'
 import PropTypes from 'prop-types';
-const Nav = () => {
-  const props = {
-    className: 'love',
-    id: 'deskmate',
-    src: 'https://gw.alipayobjects.com/zos/rmsportal/XuVpGqBFxXplzvLjJBZB.svg'
-  };
-  return (
-    <img {...props} />
-  )
-}
 
 class TestCom extends Component {
   constructor(props) {
     super(props)
-  }
-  static defaultProps = {
-    name: '我喜欢你'
-  }
-  static propTypes = {
-    // name: PropTypes.string,
-    // name: PropTypes.number,
-    // name: PropTypes.bool,
-    // name: PropTypes.object,
-    // name: PropTypes.func,
-    // name: PropTypes.array,
-    // name: PropTypes.symbol,
-    // name: PropTypes.any,
-    name: PropTypes.any.isRequired,
+    this.state = {
+      time: new Date(),
+      isOpen: true,
+      theme: 'android',
+      customHeader: '出生日期'
+    }
   }
   render() {
+    let { time, isOpen, theme, customHeader } = this.state
     return (
-      <main>
-        {this.props.name}
-        <Nav />
-      </main>
+      <DatePicker
+        value={time}
+        isOpen={isOpen}
+        theme={theme}
+        customHeader={customHeader}
+        dateConfig={{
+          'year': {
+            format: 'YYYY',
+            caption: '年',
+            step: 1,
+          },
+          'month': {
+            format: 'M',
+            caption: '月',
+            step: 1,
+          },
+          'date': {
+            format: 'D',
+            caption: '日',
+            step: 1,
+          },
+        }}
+
+      ></DatePicker>
     )
   }
 }
